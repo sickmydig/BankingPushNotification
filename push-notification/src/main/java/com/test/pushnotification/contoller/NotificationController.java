@@ -31,5 +31,6 @@ public class NotificationController {
     public ResponseEntity<?> send(@PathVariable String username, @RequestBody NotificationRequest request) {
         emitterService.pushNotification(username, request.getFrom(), request.getMessage());
         return ResponseEntity.ok().body("message pushed to user " + username);
+
     }
 }

@@ -23,7 +23,6 @@ public class NotificationController {
 
         SseEmitter sseEmitter = new SseEmitter(24 * 60 * 60 * 1000l);
         emitterService.addEmitter(sseEmitter);
-
         log.info("subscribed");
         return sseEmitter;
     }
